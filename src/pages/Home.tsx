@@ -56,18 +56,18 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="mx-auto flex min-h-[calc(100vh-2rem)] max-w-6xl flex-col justify-center px-4 py-16">
-        <div className="max-w-3xl">
-          <div className="flex items-center gap-2 text-sm font-medium text-beat-300">
+        <div className="mx-auto max-w-3xl text-center md:text-left">
+          <div className="flex items-center justify-center gap-2 text-sm font-medium text-beat-300 md:justify-start">
             <Icon name="sparkles" className="h-4 w-4" />
             Tesoro
           </div>
           <h1 className="mt-4 font-display text-4xl font-bold tracking-tight text-ink-100 sm:text-6xl sm:leading-[1.05]">
-            Discover local gatherings.
+            We share events, ceremonies and festivals.
           </h1>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start">
             <button
               onClick={openContactModal}
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-beat-500 px-6 py-3.5 text-base font-medium text-white shadow-[0_6px_20px_-6px_rgba(59,130,246,0.5)] transition-all hover:bg-beat-600"
+              className="hidden items-center justify-center gap-2 rounded-xl bg-beat-500 px-6 py-3.5 text-base font-medium text-white shadow-[0_6px_20px_-6px_rgba(59,130,246,0.5)] transition-all hover:bg-beat-600 md:inline-flex"
             >
               Sign up
             </button>
@@ -138,14 +138,14 @@ function EventDirectory({ events }: { events: DrumEvent[] }) {
   return (
     <section
       id="directory"
-      className="mx-auto max-w-6xl scroll-mt-8 border-t border-ink-100/15 px-4 pt-0 pb-6 sm:pt-0 sm:pb-10"
+      className="mx-auto max-w-6xl scroll-mt-8 px-4 pt-0 pb-6 sm:pt-0 sm:pb-10"
     >
-      <div className="flex flex-wrap items-end justify-between gap-3">
+      <div className="flex flex-col items-center gap-3 text-center md:flex-row md:flex-wrap md:items-end md:justify-between md:text-left">
         <div>
           <h2 className="font-display text-3xl font-bold text-ink-100 sm:text-4xl">
             Upcoming events
           </h2>
-          <p className="mt-2 max-w-xl text-base text-ink-400">
+          <p className="mx-auto mt-2 max-w-xl text-base text-ink-400 md:mx-0">
             Browse the full list and filter by region, type, or location.
           </p>
         </div>

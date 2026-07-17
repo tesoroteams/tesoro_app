@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-ink-100/15 bg-ink-950/80 backdrop-blur-lg">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
+      <div className="relative mx-auto flex h-16 max-w-6xl items-center justify-center px-4 md:justify-between">
         <Link to="/" className="flex items-center gap-2.5">
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-beat-500 text-white shadow-[0_6px_20px_-6px_rgba(59,130,246,0.6)]">
             <Icon name="treasure" className="h-5 w-5" />
@@ -32,7 +32,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="rounded-lg p-2 text-ink-200 hover:bg-ink-100/5 md:hidden"
+          className="absolute right-4 rounded-lg p-2 text-ink-200 hover:bg-ink-100/5 md:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Menu"
         >
