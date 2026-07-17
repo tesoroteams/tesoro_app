@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useContactModal } from "../../context/ContactModalContext";
 import Button from "../ui/Button";
 import Icon from "../ui/Icon";
@@ -25,12 +25,6 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex">
-          <NavLink to="/events" className={navLinkClass}>
-            Browse events
-          </NavLink>
-        </nav>
-
         <div className="hidden items-center gap-3 md:flex">
           <Button size="sm" onClick={openContactModal}>
             Sign up
@@ -49,13 +43,6 @@ export default function Navbar() {
       {open && (
         <div className="border-t border-ink-100/15 bg-ink-950/95 px-4 py-3 md:hidden">
           <div className="flex flex-col gap-1">
-            <NavLink
-              to="/events"
-              className={navLinkClass({ isActive: false })}
-              onClick={() => setOpen(false)}
-            >
-              Browse events
-            </NavLink>
             <button
               className={navLinkClass({ isActive: false })}
               onClick={() => {
