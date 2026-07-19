@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="flex items-center gap-2">
           <Icon name="treasure" className="h-4 w-4 text-beat-400" />
           <span>
-            Tesoro - community-maintained local events. Demo data only.
+            Tesoro - community-maintained local events.
           </span>
         </div>
         <button

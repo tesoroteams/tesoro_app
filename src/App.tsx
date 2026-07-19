@@ -7,6 +7,7 @@ import ContactModal from "./components/ContactModal";
 import EventModal from "./components/event/EventModal";
 import Layout from "./components/layout/Layout";
 import Home from "./pages/Home";
+import Pricing from "./pages/Pricing";
 import Signup from "./pages/Signup";
 import NotFound from "./pages/NotFound";
 
@@ -21,6 +22,7 @@ export default function App() {
             <Layout>
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/pricing" element={<Pricing />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
